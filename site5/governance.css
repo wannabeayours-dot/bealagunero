@@ -1,0 +1,171 @@
+/*  REGENT & COUNCIL PROFILE IMAGE STYLES (Floating Portrait)  */
+.regent-profile-img {
+    width: 200px;
+    height: 260px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover; 
+    object-position: top center; 
+    border: 3px solid var(--gold);
+    margin: 0 auto 25px auto; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.mandate-card:hover .regent-profile-img, 
+.president-highlight-card:hover .regent-profile-img {
+    transform: scale(1.05);
+}
+
+.regent-role {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* GOVERNANCE SPECIFIC STYLES */
+
+/* Background image update for private institution hero */
+.office-hero {
+    background: linear-gradient(rgba(39, 41, 69, 0.9), rgba(39, 41, 69, 0.9)), url('../PICTURES/executive_city_bg.jpg') !important;
+    background-size: cover;
+    background-position: center;
+}
+
+/*  REGENT & COUNCIL PROFILE IMAGE STYLES (Floating Portrait)  */
+.regent-profile-img {
+    width: 200px;
+    height: 260px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover; 
+    object-position: top center; 
+    border: 3px solid var(--gold);
+    margin: 0 auto 25px auto; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.mandate-card:hover .regent-profile-img, 
+.president-highlight-card:hover .regent-profile-img {
+    transform: scale(1.05);
+}
+
+/* OFFICIAL MESSAGE SECTION LAYOUT (Para kina Pres at VPAA sa dulo)  */
+.message-section {
+    position: relative;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Text Column */
+.message-text-column {
+    flex: 0 1 55%; 
+    position: relative;
+    padding: 40px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+}
+
+.message-quote-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 2rem;
+    opacity: 0.2;
+}
+
+.message-text-column .elegant-paragraph {
+    font-family: var(--font-serif);
+    font-style: italic;
+    line-height: 1.9;
+}
+
+/* Image Column (PNG ng President / VPAA) */
+.message-image-column {
+    flex: 0 1 45%; 
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end; 
+}
+
+.vice-chairman-message-img {
+    width: 100%;
+    max-width: 480px; 
+    height: auto;
+    max-height: 600px; 
+    object-fit: contain; 
+    display: block;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4)); 
+    margin: 0 auto;
+}
+
+/* Signature Area and Decorations */
+.message-signature-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signature-line {
+    width: 80px;
+    height: 1px;
+    background-color: var(--gold);
+}
+
+.signature-top {
+    margin-bottom: 15px;
+}
+
+.signature-bottom {
+    margin-top: 10px;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 991px) {
+    .message-container {
+        flex-direction: column-reverse; 
+        text-align: center;
+    }
+
+    .message-text-column {
+        flex: 1 1 100%;
+        margin-bottom: 40px; 
+    }
+
+    .message-image-column {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 40px; 
+    }
+
+    .vice-chairman-message-img {
+        max-width: 380px; 
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .message-text-column {
+        padding: 20px;
+    }
+
+    .message-quote-icon {
+        font-size: 1.5rem;
+    }
+    
+    .vice-chairman-message-img {
+        max-width: 280px; 
+    }
+}
