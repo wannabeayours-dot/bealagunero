@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Registration | Clarjon University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body data-path="../">
+
+    <div id="header-container"></div>
+
+    <main class="reg-main flex-center align-center">
+        <div class="reg-container large-container scroll-reveal">
+            <div class="reg-header text-center">
+                <img src="../LOGO/CLARJON_LOGO.png" alt="Clarjon University Logo" class="reg-logo">
+                <h1 class="reg-title">Initial Pre-Registration</h1>
+                <p class="reg-subtitle">Declaration of Intent for the Incoming Academic Year</p>
+            </div>
+
+            <form id="enrollmentForm" class="custom-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">Given Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Surname</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="email">Primary Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Complete Residential Address</label>
+                        <input type="text" id="address" name="address" placeholder="House Number, Street, City, Province, Postal Code" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="program">Intended Degree Program</label>
+                        <select id="program" name="program" required>
+                            <option value="" disabled selected>Select an elite program</option>
+
+                            <optgroup label="School of Business and Finance">
+                                <option value="bus-finance">Bachelor of Science in Global Finance and Investment Strategy</option>
+                                <option value="bus-mgmt">Bachelor of Science in Corporate Management and Executive Leadership</option>
+                                <option value="bus-acct">Bachelor of Science in Strategic Accounting and Elite Audit</option>
+                            </optgroup>
+
+                            <optgroup label="School of International Diplomacy">
+                                <option value="dip-ir">Bachelor of Arts in International Relations and Global Policy</option>
+                                <option value="dip-conflict">Bachelor of Arts in Strategic Intelligence and Conflict Resolution</option>
+                                <option value="dip-econ">Bachelor of Arts in Global Political Economy</option>
+                            </optgroup>
+
+                            <optgroup label="School of Engineering and Applied Sciences">
+                                <option value="eng-civil">Bachelor of Science in Civil Engineering</option>
+                                <option value="eng-mech">Bachelor of Science in Mechanical Engineering</option>
+                                <option value="eng-elec">Bachelor of Science in Electrical Engineering</option>
+                                <option value="eng-comp">Bachelor of Science in Computer Engineering</option>
+                                <option value="eng-chem">Bachelor of Science in Chemical Engineering</option>
+                                <option value="eng-ind">Bachelor of Science in Industrial Engineering</option>
+                                <option value="app-it">Bachelor of Science in Information Technology and Systems Design</option>
+                                <option value="app-cs">Bachelor of Science in Computer Science and Artificial Intelligence</option>
+                                <option value="app-data">Bachelor of Science in Data Science and Predictive Analytics</option>
+                            </optgroup>
+
+                            <optgroup label="School of Architecture and Design">
+                                <option value="arch-arch">Bachelor of Science in Architecture</option>
+                                <option value="arch-int">Bachelor of Science in Interior Design</option>
+                                <option value="arch-land">Bachelor of Science in Landscape Architecture</option>
+                                <option value="arch-urban">Bachelor of Science in Urban Planning and Development</option>
+                            </optgroup>
+
+                            <optgroup label="School of Medicine (Pre-Medicine & Professional)">
+                                <option value="med-nurs">Bachelor of Science in Nursing</option>
+                                <option value="med-tech">Bachelor of Science in Medical Technology</option>
+                                <option value="med-pharm">Bachelor of Science in Pharmacy</option>
+                                <option value="med-pt">Bachelor of Science in Physical Therapy</option>
+                                <option value="med-bio">Bachelor of Science in Biology (Pre-Medicine Track)</option>
+                                <option value="med-doc">Doctor of Medicine</option>
+                            </optgroup>
+
+                            <optgroup label="School of Law">
+                                <option value="law-juris">Juris Doctor</option>
+                                <option value="law-llm">Master of Laws in Global Corporate Governance</option>
+                                <option value="law-sjd">Doctor of Juridical Science in Human Rights and Constitutional Law</option>
+                            </optgroup>
+
+                            <optgroup label="Graduate School of Research">
+                                <option value="grad-mba">Master of Business Administration in Executive Corporate Strategy</option>
+                                <option value="grad-macro">Doctor of Philosophy in Global Macroeconomics and Wealth Management</option>
+                                <option value="grad-fin">Master of Science in International Financial Engineering</option>
+                                <option value="grad-dip">Master of Arts in Global Diplomacy and Geopolitical Strategy</option>
+                                <option value="grad-pol">Doctor of Philosophy in Public Policy and Global Governance</option>
+                                <option value="grad-soft">Master of Science in Advanced Software Architecture and Frontend Ecosystems</option>
+                                <option value="grad-sys">Doctor of Philosophy in Complex Systems Design and Integration</option>
+                                <option value="grad-ai">Doctor of Philosophy in Artificial Intelligence and Machine Learning</option>
+                                <option value="grad-cyb">Master of Science in Cybersecurity and Cryptographic Systems</option>
+                                <option value="grad-data">Master of Science in Data Science and Predictive Analytics</option>
+                                <option value="grad-civ">Master of Science in Structural Engineering and Seismic Design</option>
+                                <option value="grad-aero">Doctor of Philosophy in Aerospace and Propulsion Engineering</option>
+                                <option value="grad-arch">Master of Architecture in Sustainable Megacity Planning</option>
+                                <option value="grad-ener">Master of Science in Renewable Energy Systems</option>
+                                <option value="grad-phys">Doctor of Philosophy in Quantum Mechanics and Applied Physics</option>
+                                <option value="grad-gen">Master of Science in Molecular Genetics and Bioengineering</option>
+                                <option value="grad-onco">Doctor of Medicine and Doctor of Philosophy in Advanced Oncology</option>
+                                <option value="grad-neuro">Master of Science in Neuroscience and Cognitive Behavioral Sciences</option>
+                                <option value="grad-llm-rights">Master of Laws in Global Human Rights and Constitutional Policy</option>
+                                <option value="grad-sjd-corp">Doctor of Juridical Science in International Corporate Law</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions mt-lg">
+                    <button type="submit" class="action-btn elite-solid-btn w-100">Submit Pre-Registration</button>
+                </div>
+            </form>
+
+            <div class="reg-footer text-center">
+                <p>Already an active scholar? <a href="Gateway.html" class="gold-link">Return to Portal</a></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="registration.js"></script>
+</body>
+</html>

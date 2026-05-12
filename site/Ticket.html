@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket System | Clarjon University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="../Registration/registration.css">
+</head>
+<body data-path="../">
+
+    <div id="ticketSuccessOverlay">
+        <div class="popup-content">
+            <i class="fas fa-check-circle fa-5x gold-text mb-md"></i>
+            <h2 class="section-title-serif text-white">Ticket Initialized</h2>
+            <p class="elegant-paragraph text-white">Reference Number: <span id="refDisplay" class="gold-text"></span></p>
+            <p class="mt-sm text-white">A confirmation has been sent to your institutional email.<br>Returning to the home network in 5 seconds...</p>
+        </div>
+    </div>
+
+    <div id="header-container"></div>
+
+    <main class="services-main">
+        <section class="block-padding bg-light">
+            <div class="content-wrapper flex-center">
+
+                <div class="reg-container large-container scroll-reveal">
+                    <div class="reg-header text-center">
+                        <i class="fas fa-ticket-alt gold-text fa-3x mb-md"></i>
+                        <h1 class="reg-title">Technical Support Ticket</h1>
+                        <p class="reg-subtitle">Information Technology Department Incident Report</p>
+                    </div>
+
+                    <form id="supportTicketForm" class="custom-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="ticketName">Full Legal Name</label>
+                                <input type="text" id="ticketName" name="ticketName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ticketEmail">Institutional Email Address</label>
+                                <input type="email" id="ticketEmail" name="ticketEmail" placeholder="scholar@clarjon.edu" required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="ticketID">Identification Number</label>
+                                <input type="text" id="ticketID" name="ticketID" placeholder="10-Digit ID" required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="issueCategory">Issue Category</label>
+                                <select id="issueCategory" name="issueCategory" required>
+                                    <option value="" disabled selected>Select the nature of your inquiry</option>
+                                    <option value="portal">Portal Access and Authentication</option>
+                                    <option value="network">Campus Network and Connectivity</option>
+                                    <option value="lms">Learning Management System Error</option>
+                                    <option value="hardware">Hardware and Laboratory Equipment</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="description">Detailed Description of Incident</label>
+                                <textarea id="description" name="description" rows="5" placeholder="Provide specific details regarding the technical anomaly..." class="custom-textarea" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions mt-lg">
+                            <button type="submit" class="action-btn elite-solid-btn w-100">Initialize Support Request</button>
+                        </div>
+                    </form>
+
+                    <div class="reg-footer text-center">
+                        <p>Immediate Emergency? <a href="Helpdesk.html" class="gold-link">Return to Helpdesk</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="services.js"></script>
+</body>
+</html>
