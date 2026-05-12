@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title> Resume </title>
+    </head>
+    <body>
+      <img src = "bey.jpg"  width = "100px" height = "90px" style = "border : 1px solid black; border-radius : 10px">
+  <p><b>Name:  </b>Lagunero,Bea T.</br>
+    <b>Email: </b><a href="http://www.gmail.com" target="_blank">Bealagunero08@gmail.com</a></br>
+      <b> Phone: </b>09459738477</br>
+        <b> Address: </b> Sapang Biabas Phase 1,Mabalacat City,Pampanga</br> 
+        <hr>
+        <h3>Career Objectives</h3>
+        <p>A motivated and responsible student seeking an opportunity to gain experience and develop skills in a professional environment. I aim to contribute positively to the organization while improving my communication, teamwork, and problem-solving</p>
+        <h3> Expertise Bio </h3>
+        <p> A motivated Information Technology student with basic knowledge of computer operations, software applications, and digital tools. Skilled in teamwork, communication, and problem-solving, with a strong willingness to learn and grow in the IT field.</p>
+        <h3> Education </h3>
+            <ul type = disc>
+              <li> <strong> College : </strong>Pampanga State Agricultural University 2029</li>
+                <li> <strong> TVL-HE Senior High School :</strong>Gov.Rafael L. Lazatin Integrated School Year 2020-2023</li>
+                    <li> <strong> Junior High School : </strong>Camachiles National High School Year 2016-2020</li>
+                        <li> <strong> Elementary :</strong>Sapang Biabas Resettlement Elementary School Year 2011-2016</li>
+            </ul>
+  </ul>
+         <h3> <b> Work Experience </b> </h3>
+              <p> Pampanga State Agricultural University June 2023</p>
+                 <p>Position: Housekeeper</p>
+              <p> Job Description </p>
+              <ul type = disc> 
+                <li>Cleaner</li>
+                <li>Crew</li>
+                            </ul> 
+            </ul>
+                            <h3> Seminars</h3>
+                            <ul type = disc>
+                              <li>Building Confidence in Public Speaking</li>
+                                <li>Effective Study Habits for Academic Success</li>
+                                  <li>Cyber Safety and Responsible Social Media Use</li>
+                                  </ul>
+            </ul>
+                                  <h3> Hardware Skills</h3>
+                                  <ul type = disc>
+                                    <li>Basic Computer Hardware Skills Training</li>
+                                      <li>Sound System Setup</li>
+                                        <li>Computer assembly and disassembl</li>
+                                        </ul>
+            </ul>
+                                        <h3> Software Skills</h3>
+                                        <ul type = disc>
+                                          <li>Software installation</li>
+                                            <li>Troubleshooting</li>
+                                              <li>Basic coding</li>
+                                              </ul>
+            </ul>
+                                              <h3> Additional Skills</h3>
+                                              <ul type = disc>
+                                                <li>Active listening</li>
+                                                  <li>Time Management</li>
+                                                    <li>Basic graphic design (Canva, Photoshop</li>
+                                                      <li>Adaptability and quick learning</li>
+                                                      </ul>
+  </ul>
+                                                      <h3> Character Reference</h3>
+                                                      <table border="1" width="100%">
+                                                        <th> Full Name</th><th>Designation</th><th>Email</th><th> Contact Number</th>
+                                                          <tr>
+                                                              <td>Ronalyn D. Flores</td>
+                                                                  <td>Web Developer</td>
+                                                                      <td> <a href="http://www.gmail.com" target="_blank"></a>floresronalyn87@gmail.com</td>
+                                                                          <td>09482554811</td>
+                                                                            </tr>
+                                                                              <tr>
+                                                                                  <td>Janna Mae C. Miranda</td>
+                                                                                      <td>Software Designer</td>
+                                                                                          <td> <a href="http://www.gmail.com" target="_blank"></a>jannamaemiranda24@gmail.com</td>
+                                                                                              <td>09056236050</td>
+                                                                                                </tr>
+                                                                                                  <tr>
+                                                                                                      <td>Alessandra M. Manlapaz</td>
+                                                                                                          <td>Civil Engineer</td>
+                                                                                                              <td> <a href="http://www.gmail.com" target="_blank"></a>Alesandramanlapaz30@gmail.com</td>
+                                                                                                                  <td>09977885640</td>
+                                                                                                                    </tr>
+                                                                                                                    </table>
+                                                                                                                    </body>
+                                                                                                                    </html>

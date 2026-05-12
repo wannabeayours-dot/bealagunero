@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Map - Campus</title>
+</head>
+<body>
+
+<h2>Computer Image Map</h2>
+<p>Click the numbered buildings.</p>
+
+<img src="image map.jpg"
+
+<map name="image-map">
+    <area target="_blank" alt="&quot;Click to go to Computer Science Org”" title="&quot;Click to go to Computer Science Org”" href="https://www.computerscience.org/" coords="415,153,429,152,432,203,415,204,415,191,407,190,409,174" shape="poly">
+    <area target="_blank" alt="&quot;Click to go to College of Business and Technology Home Page.&quot;" title="&quot;Click to go to College of Business and Technology Home Page.&quot;" href="https://asingan.psu.edu.ph/college-of-technology-and-business/" coords="269,157,269,196,309,196,306,15" shape="poly">
+    <area target="_blank" alt="&quot;Click to go to Department IC Technology Home Page.&quot;" title="&quot;Click to go to Department IC Technology Home Page.&quot;" href="https://dict.gov.ph/" coords="187,256,187,284,168,282,170,308,207,310,213,25" shape="poly">
+    <area target="_blank" alt="&quot;Click to go to Harper Library Home Page.&quot;" title="&quot;Click to go to Harper Library Home Page.&quot;" href="https://www.harper-adams.ac.uk/study/902/the-library/" coords="554,336,30" shape="circle">
+</map>
+
+</body>
+</html>
+
+    
+    <hr>
+<h2>Source Code</h2>
+<img src="3.jpeg" height="1200px">
+
+
+<br><br>
+<div style="text-align: center;">
+    <a href="#top">Back to Top</a>
+</div>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>Menus</title>
+    </head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+#container1{
+    display:flex;
+    flex-direction:column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header{
+    background-color: pink;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+header h1, h3{
+    color: yellow;
+}
+
+#container2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#left-nav{
+    flex: 1;
+}
+
+#menu ul{
+    list-style-type: none;
+}
+
+#menu li a{
+display: block;
+padding: 10px;
+text-decoration: none;
+color: yellow;
+background-color: lightpink;
+margin-bottom: 2px;
+border-radius: 4px;
+border: 1px solid pink;
+}
+
+#menu li a:hover{
+    background-color: darkgoldenrod;
+}
+
+#center-text{
+    flex: 3;
+    color: #CD5C5C;
+}
+
+#center-text h1{
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #CD5C5C;
+}
+
+#center-text h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #CD5C5C;
+}
+
+#sidebar{
+    flex: 1.5;
+    background-color: lightpink;
+    color: yellow;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: lightpink;
+    padding: 15px;
+    font-size: 13px;
+    border: 1px solid pink;
+    border-radius: 4px;
+    color: yellow;
+}
+</style>
+
+<body>
+
+<div id="container1">
+<header>
+    <h1>Welcome to My Homepage</h1>
+    <h3>Use the menu to select diffrent Stylesheets</h3>
+</header>
+
+<section id="container2">
+    <div id="left-nav">
+    <nav id="menu">
+    <ul>
+        <li><a href="#stylesheet1">Stylesheet 1</a></li>
+        <li><a href="#stylesheet2">Stylesheet 2</a></li>
+        <li><a href="#stylesheet3">Stylesheet 3</a></li>
+        <li><a href="#stylesheet4">Stylesheet 4</a></li>
+        <li><a href="#nostylesheet">No Stylesheet</a></li>
+    </ul>
+    </nav>
+    </div>
+
+   <div id="center-text">
+    <h1>Same Page Different Stylesheets</h1>
+    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
+    <br>
+    <a href="#stylesheet1">Stylesheet 1, </a>
+    <a href="#stylesheet2">Stylesheet 2, </a>
+    <a href="#stylesheet3">Stylesheet 3, </a>
+    <a href="#stylesheet4">Stylesheet 4, </a>
+    <br>
+    <br>
+    <h1>No Styles</h1>
+    <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet: </p>
+    <br>
+    <a href="#nostylesheet">No Stylesheet</a>
+    </div>
+
+    <div id="sidebar">
+        <h3>Side Bar</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+</section>
+   <footer>
+   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit ess molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi
+   </footer>
+
+</div>
+
+</body>
+</html>
