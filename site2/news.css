@@ -1,0 +1,181 @@
+/*NEWS CSS*/
+
+:root {
+    --gold: #D4AF37;
+    --navy: #272945;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --font-trajan: 'Cinzel', serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); background: var(--light-gray); color: #333; overflow-x: hidden; }
+
+/* Utilities */
+.content-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+.block-padding { padding: 100px 0; }
+.bg-light { background-color: var(--light-gray); }
+.bg-white { background-color: var(--white); }
+.text-center { text-align: center; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.gold-text { color: var(--gold); }
+.text-navy { color: var(--navy); }
+.mb-lg { margin-bottom: 50px; }
+.mt-sm { margin-top: 15px; }
+
+/* Typography */
+.section-title-serif { font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 15px; }
+.header-divider { width: 60px; height: 3px; background-color: var(--gold); margin: 0 auto 20px auto; }
+.elegant-link { color: var(--navy); font-weight: 700; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; transition: color 0.3s ease; }
+.elegant-link:hover { color: var(--gold); }
+.elegant-link.small-link { font-size: 0.95rem; }
+
+/* Hero Section */
+.news-hero {
+    height: 65vh;
+    background: linear-gradient(rgba(39, 41, 69, 0.9), rgba(39, 41, 69, 0.9)), url('../PICTURES/executive_city_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.news-eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 15px; font-weight: 700; }
+.news-title-trajan { font-family: var(--font-trajan); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 25px; }
+.news-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+/* FEATURED NEWS LAYOUT (Updated to Stacked/Landscape) */
+.featured-news-card {
+    display: flex;
+    flex-direction: column; /* UPDATED: Changed from row to column for image-on-top */
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+}
+
+.featured-news-img-container {
+    width: 100%; /* UPDATED: Spans full width */
+    height: 550px; /* UPDATED: Increased height to create a powerful landscape banner feel across 1200px width */
+    overflow: hidden;
+}
+
+.featured-news-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers landscape area beautifully */
+    object-position: center top; /* Keeps focus on faces in landscape view */
+}
+
+.featured-news-content {
+    width: 100%; /* UPDATED: Spans full width */
+    padding: 60px 80px; /* UPDATED: More padding for full-width text comfort */
+}
+
+.news-date { font-size: 0.85rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block; }
+.news-headline { font-family: var(--font-serif); font-size: 2.5rem; color: var(--navy); margin-bottom: 25px; line-height: 1.2; }
+.news-excerpt { font-size: 1.1rem; color: #555; line-height: 1.9; margin-bottom: 20px; text-align: justify; }
+
+/* News Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.news-card-img-wrapper {
+    height: 220px;
+    overflow: hidden;
+}
+
+.news-card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.news-card-body {
+    padding: 30px;
+}
+
+.news-card-title { font-family: var(--font-serif); font-size: 1.3rem; color: var(--navy); margin-bottom: 15px; line-height: 1.4; }
+.news-card-excerpt { font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+
+/* Scroll Animation Classes */
+.scroll-reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.scroll-reveal.fade-in { opacity: 1; transform: translateY(0); }
+
+/* Responsive adjustments for Mobile/Tablet */
+@media (max-width: 1199px) {
+    .featured-news-content { padding: 50px; }
+    .featured-news-img-container { height: 450px; }
+}
+
+@media (max-width: 991px) {
+    /* (Flip logic removed as default is now stacked column) */
+    .featured-news-img-container { height: 350px; } /* Landscape height adjusted for tablet */
+    .featured-news-content { padding: 30px; }
+    .news-headline { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+    .featured-news-img-container { height: 250px; } /* Landscape height adjusted for mobile */
+    .news-headline { font-size: 1.6rem; }
+}
+
+/* === FULL ARTICLE SPECIFIC STYLES === */
+.article-container {
+    max-width: 900px; /* Mas makitid para komportableng basahin ang balita */
+    margin: 0 auto;
+}
+
+.article-hero-img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.article-body-text {
+    font-size: 1.15rem;
+    color: #4a4a4a;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.article-blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--navy);
+    font-style: italic;
+    border-left: 5px solid var(--gold);
+    padding: 30px 40px;
+    margin: 40px 0;
+    background: var(--light-gray);
+    line-height: 1.5;
+}
