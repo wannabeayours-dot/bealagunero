@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Gateway | Clarjon University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="gate.css">
+</head>
+<body>
+
+    <main class="admin-gateway-main flex-center align-center">
+        <div class="admin-login-container scroll-reveal">
+            <div class="admin-header text-center">
+                <i class="fas fa-shield-alt shield-icon"></i>
+                <h1 class="admin-title">Institutional Command</h1>
+                <p class="admin-subtitle">Restricted Administrator Gateway</p>
+                <div class="security-divider"></div>
+            </div>
+
+            <form id="adminLoginForm" class="admin-form">
+                <div class="form-group">
+                    <label for="adminEmail">Administrator Email or Username</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="text" id="adminEmail" name="adminEmail" placeholder="Enter admin credentials" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPass">Security Passcode</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-key input-icon"></i>
+                        <input type="password" id="adminPass" name="adminPass" placeholder="Enter security passcode" required autocomplete="current-password">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="admin-action-btn w-100">Authorize Access</button>
+                </div>
+            </form>
+
+            <div class="admin-footer text-center">
+                <p>Unauthorized access is strictly monitored.</p>
+                <a href="../index.html" class="return-link"><i class="fas fa-arrow-left"></i> Return to Public Site</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="gate.js"></script>
+</body>
+</html>
