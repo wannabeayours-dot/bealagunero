@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar Portal | Clarjon University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+    <div class="portal-layout">
+
+        <aside class="portal-sidebar" id="portalSidebar">
+            <div class="sidebar-header">
+                <img src="../LOGO/CLARJON_LOGO.png" alt="Clarjon University Logo" class="sidebar-logo">
+                <h2 class="sidebar-title">Scholar Portal</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="Portal.html" class="nav-item active"><i class="fas fa-th-large nav-icon"></i> Executive Dashboard</a>
+                <a href="ARecords.html" class="nav-item"><i class="fas fa-user-graduate nav-icon"></i> Academic Records</a>
+                <a href="MSchedule.html" class="nav-item"><i class="fas fa-calendar-alt nav-icon"></i> Master Schedule</a>
+                <a href="Financial.html" class="nav-item"><i class="fas fa-file-invoice-dollar nav-icon"></i> Financial Ledger</a>
+                <a href="LMS.html" class="nav-item"><i class="fas fa-chalkboard-teacher nav-icon"></i> Learning Management System</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="../index.html" class="nav-item logout-btn"><i class="fas fa-sign-out-alt nav-icon"></i> Terminate Session</a>
+            </div>
+        </aside>
+
+        <main class="portal-main">
+
+            <header class="portal-topbar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="topbar-right">
+                    <span class="academic-term">Academic Year 2026 - 2027 | First Semester</span>
+                    <div class="user-profile">
+                        <div class="user-avatar"><i class="fas fa-user-tie"></i></div>
+                        <span class="user-name">Welcome, Distinguished Scholar</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+
+                <div class="welcome-banner fade-in">
+                    <h1 class="banner-title">Welcome to the Clarjon Network</h1>
+                    <p class="banner-subtitle">Your central command for academic excellence and institutional resources.</p>
+                </div>
+
+                <div class="stats-grid fade-in">
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper gold-bg"><i class="fas fa-star"></i></div>
+                        <div class="stat-details">
+                            <span class="stat-label">General Grade Point Average</span>
+                            <span class="stat-value">1.15</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper navy-bg"><i class="fas fa-book"></i></div>
+                        <div class="stat-details">
+                            <span class="stat-label">Enrolled Academic Units</span>
+                            <span class="stat-value">24 Units</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper red-bg"><i class="fas fa-balance-scale-right"></i></div>
+                        <div class="stat-details">
+                            <span class="stat-label">Outstanding Financial Balance</span>
+                            <span class="stat-value">Fully Settled</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widgets-grid fade-in">
+
+                    <div class="widget-card">
+                        <div class="widget-header">
+                            <h3 class="widget-title"><i class="fas fa-clock"></i> Today's Lectures</h3>
+                        </div>
+                        <div class="widget-body">
+                            <ul class="schedule-list">
+                                <li class="schedule-item">
+                                    <span class="time-block">08:00 AM - 11:00 AM</span>
+                                    <div class="lecture-details">
+                                        <span class="subject-name">Advanced Systems Architecture</span>
+                                        <span class="room-name">Quantum Laboratory Room 402</span>
+                                    </div>
+                                </li>
+                                <li class="schedule-item">
+                                    <span class="time-block">01:00 PM - 04:00 PM</span>
+                                    <div class="lecture-details">
+                                        <span class="subject-name">Global Political Economy</span>
+                                        <span class="room-name">Diplomacy Hall Auditorium B</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget-card">
+                        <div class="widget-header">
+                            <h3 class="widget-title"><i class="fas fa-bullhorn"></i> Institutional Bulletins</h3>
+                        </div>
+                        <div class="widget-body">
+                            <ul class="bulletin-list">
+                                <li class="bulletin-item">
+                                    <span class="bulletin-date">August 12, 2026</span>
+                                    <span class="bulletin-text">Mandatory orientation for all scholars enrolled in the College of Engineering and Applied Sciences regarding laboratory protocols.</span>
+                                </li>
+                                <li class="bulletin-item">
+                                    <span class="bulletin-date">August 10, 2026</span>
+                                    <span class="bulletin-text">The deadline for dropping academic subjects without financial penalty has been extended by the Office of Admission and Registration.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="portal.js"></script>
+</body>
+</html>

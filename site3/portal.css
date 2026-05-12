@@ -1,0 +1,427 @@
+/* SCHOLAR PORTAL EXECUTIVE DESIGN */
+
+:root {
+    --gold: #D4AF37;
+    --navy: #272945;
+    --dark: #1a1b2e;
+    --white: #ffffff;
+    --light-gray: #f4f6f9;
+    --border: #e2e8f0;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --font-trajan: 'Cinzel', serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+    --sidebar-width: 280px; /* Pinaliit nang kaunti ang sidebar */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); background-color: var(--light-gray); color: var(--text-main); overflow-x: hidden; }
+
+/* MAIN LAYOUT */
+.portal-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/*  SIDEBAR  */
+.portal-sidebar {
+    width: var(--sidebar-width);
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+    transition: transform 0.4s ease;
+}
+
+.sidebar-header {
+    padding: 40px 30px 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar-logo {
+    width: 80px; /* Pinaliit nang kaunti */
+    margin-bottom: 15px;
+}
+
+.sidebar-title {
+    font-family: var(--font-trajan);
+    color: var(--gold);
+    font-size: 1.05rem; 
+    letter-spacing: 1.5px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-item {
+    padding: 15px 35px;
+    color: #a0aec0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    font-size: 0.85rem; /* Pinaliit ang menu text */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: rgba(255,255,255,0.03);
+    color: var(--gold);
+    border-left-color: var(--gold);
+}
+
+.nav-icon {
+    width: 18px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.sidebar-footer {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.logout-btn {
+    color: #fc8181;
+}
+
+.logout-btn:hover {
+    color: #f56565;
+    background: rgba(252, 129, 129, 0.05);
+    border-left-color: #f56565;
+}
+
+/* MAIN CONTENT AREA */
+.portal-main {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* TOP BAR  */
+.portal-topbar {
+    height: 70px; /* Mas manipis na topbar */
+    background: var(--white);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.academic-term {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem; /* Pinaliit */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 30px;
+    border-left: 1px solid var(--border);
+}
+
+.user-avatar {
+    width: 35px; /* Pinaliit */
+    height: 35px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.user-name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.95rem; /* Pinaliit */
+    color: var(--navy);
+}
+
+/* DASHBOARD CONTENT  */
+.dashboard-content {
+    padding: 40px;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+    border-radius: 8px;
+    padding: 45px 40px;
+    color: var(--white);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(39, 41, 69, 0.1);
+    border-left: 4px solid var(--gold);
+}
+
+.banner-title {
+    font-family: var(--font-trajan);
+    font-size: 1.8rem; /* Mas siksik na title */
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.banner-subtitle {
+    font-size: 0.95rem; 
+    color: #cbd5e1;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid var(--border);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-color: var(--gold);
+}
+
+.stat-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.gold-bg { background: rgba(212, 175, 55, 0.1); color: var(--gold); }
+.navy-bg { background: rgba(39, 41, 69, 0.1); color: var(--navy); }
+.red-bg { background: rgba(229, 62, 62, 0.1); color: #e53e3e; }
+
+.stat-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 0.7rem; /* Mas maliit, academic label */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.stat-value {
+    font-family: var(--font-trajan);
+    font-size: 1.4rem; /* Mas refined na numero */
+    font-weight: 700;
+    color: var(--navy);
+}
+
+/* Widgets Grid (Schedule & Bulletins) */
+.widgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+.widget-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.widget-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--border);
+    background: #fcfcfc;
+}
+
+.widget-title {
+    font-family: var(--font-serif);
+    font-size: 1.15rem; /* Classic size */
+    color: var(--navy);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.widget-title i {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+/* Lists styling inside widgets */
+.schedule-list, .bulletin-list {
+    list-style: none;
+}
+
+.schedule-item, .bulletin-item {
+    padding: 25px 30px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 25px;
+    transition: background 0.3s ease;
+}
+
+.schedule-item:last-child, .bulletin-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-item:hover, .bulletin-item:hover {
+    background: #f8fafc;
+}
+
+.time-block {
+    width: 140px;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.85rem; /* Pinaliit na time block */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.lecture-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.subject-name {
+    font-family: var(--font-trajan);
+    font-size: 1.05rem; /* Siksik na subject name */
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.room-name {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.bulletin-item {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bulletin-date {
+    font-size: 0.75rem; /* Siksik na date */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.bulletin-text {
+    line-height: 1.6;
+    color: var(--text-main);
+    font-size: 0.9rem; /* Academic reading size */
+    text-align: justify;
+}
+
+/* Entrance Animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE LAYOUT (For Tablets and Phones) */
+@media (max-width: 1200px) {
+    .portal-sidebar {
+        transform: translateX(-100%); 
+    }
+    .portal-sidebar.active {
+        transform: translateX(0); 
+        box-shadow: 10px 0 40px rgba(0,0,0,0.3);
+    }
+    .portal-main {
+        margin-left: 0;
+    }
+    .menu-toggle {
+        display: block; 
+    }
+}
+
+@media (max-width: 991px) {
+    .academic-term {
+        display: none; 
+    }
+    .widgets-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .portal-topbar { padding: 0 20px; }
+    .dashboard-content { padding: 20px; }
+    .welcome-banner { padding: 30px 25px; }
+    .banner-title { font-size: 1.5rem; }
+    .schedule-item { flex-direction: column; gap: 5px; }
+    .time-block { width: 100%; color: var(--gold); margin-bottom: 5px; }
+}
